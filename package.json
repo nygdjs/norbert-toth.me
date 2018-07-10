@@ -32,12 +32,14 @@
         "lint:css": "stylelint './styles/*.css'",
         "pdf": "node scripts/toPDF.js",
         "precommit": "lint-staged",
-        "reboot": "npm run cleanup; npm install"
+        "reboot": "npm run cleanup; npm install",
+        "start": "browser-sync start --server --files './'"
     },
     "dependencies": {
         "normalize.css": "^8.0.0"
     },
     "devDependencies": {
+        "browser-sync": "^2.24.5",
         "html-pdf": "^2.2.0",
         "husky": "^0.14.3",
         "imagemin-lint-staged": "^0.3.0",
