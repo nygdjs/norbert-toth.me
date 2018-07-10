@@ -1,0 +1,91 @@
+/* Import Normalize */
+
+@import url('../node_modules/normalize.css/normalize.css');
+/* Import Material design theme, layout-grid and typography modules
+https://material.io/develop/web/components/typography/
+https://material.io/develop/web/components/theme/
+https://material.io/develop/web/components/theme/ */
+
+@import url('../node_modules/@material/theme/dist/mdc.theme.css');
+@import url('../node_modules/@material/typography/dist/mdc.typography.css');
+@import url('../node_modules/@material/layout-grid/dist/mdc.layout-grid.css');
+/* Reset for margin-block feature in Chrome and FF */
+
+* {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+}
+
+.header__portrait-image {
+    margin: auto auto;
+}
+
+.header__portrait-image img {
+    border-radius: 50%;
+    max-width: 18em;
+    width: 100%;
+}
+
+.header__name {
+    margin-bottom: 0;
+}
+
+.header__profession {
+    margin-bottom: 1.2em;
+    opacity: 0.5;
+}
+
+@media (min-width: 840px) {
+    .header__profession {
+        margin-bottom: var(--mdc-layout-grid-margin-desktop, 24px);
+    }
+}
+
+@media (max-width: 839px) and (min-width: 480px) {
+    .header__profession {
+        margin-bottom: var(--mdc-layout-grid-margin-tablet, 16px);
+    }
+}
+
+@media (max-width: 479px) {
+    .header__profession {
+        margin-bottom: var(--mdc-layout-grid-margin-phone, 16px);
+    }
+}
+
+.experience-card {
+    background-color: white;
+    margin: 0.6em;
+}
+
+main {
+    background-color: rgb(226, 226, 226);
+}
+
+.mdc-typography--body1+.mdc-typography--body1 {
+    margin-top: 0.8em;
+}
+
+@media print {
+    @page {
+        margin: 0.3cm;
+    }
+    a {
+        color: var(--mdc-theme--primary);
+        text-decoration: none;
+    }
+}
+
+/* Avenir,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Helvetica,
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol" */
