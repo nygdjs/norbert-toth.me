@@ -71,8 +71,8 @@
                         <h5 class="typography--subtitle2">Budapest, Hungary</h5>
                     </hgroup>
 
-                    <div aria-labelledby="frontend-developer" class="card__section">
-                        <hgroup role="heading">
+                    <div aria-labelledby="frontend-developer" class="card__body">
+                        <hgroup role="heading" class="card__body__subheader">
                             <h5 class="typography--overline">
                                 <time>Late 2014 - MAY 2018</time>
                             </h5>
@@ -99,8 +99,8 @@
                             and npm.).
                         </p>
                     </div>
-                    <div aria-labelledby="content-editor" class="card__section">
-                        <hgroup role="heading">
+                    <div aria-labelledby="content-editor" class="card__body">
+                        <hgroup role="heading" class="card__body__subheader">
                             <h5 class="typography--overline">
                                 <time>August 2013 - Late 2014</time>
                             </h5>
@@ -115,7 +115,7 @@
                 </section>
 
                 <section role="region" aria-labelledby="oazis" class="card">
-                    <hgroup role="heading">
+                    <hgroup role="heading" class="card__header">
                         <h4 class="typography--overline">
                             <time>February 2008 - August 2013</time>
                         </h4>
@@ -124,7 +124,7 @@
                         </h3>
                         <h5 class="typography--subtitle2">Budapest, Hungary</h5>
                     </hgroup>
-                    <div aria-labelledby="shop-manager" class="card__section">
+                    <div aria-labelledby="shop-manager" class="card__body">
                         <h4 id="shop-manager" class="typography--headline6">Shop manager, Creative manager, Display specialist</h4>
                         <p class="typography--body1">I worked there from the first day, we opened the shop. As the company is a specialist in creative
                             process related hardwares (graphics displays, pen tablets, workstations), my role beside normal
@@ -145,7 +145,7 @@
                 <h2 id="education" class="typography--headline4">Education</h2>
 
                 <section role="region" aria-labelledby="bmfRKK" class="card">
-                    <hgroup role="heading">
+                    <hgroup role="heading" class="card__header">
                         <h4 class="typography--overline">
                             <time>2010-2012 (Unfinished)</time>
                         </h4>
@@ -153,9 +153,9 @@
                             <a href="https://www.uni-obuda.hu/en" target="blank">Óbuda University</a>
                         </h3>
                         <h5 class="typography--subtitle2">Budapest, Hungary</h5>
-                        <h5 class="typography--subtitle1">Sándor Rejtő Faculty of Light Industry and Environmental Protection Engineering</h5>
                     </hgroup>
-                    <div>
+                    <div class="card__body">
+                        <h5 class="typography--subtitle1">Sándor Rejtő Faculty of Light Industry and Environmental Protection Engineering</h5>
                         <h4 class="typography--headline6">
                             Light Industry Engineering
                         </h4>
@@ -163,7 +163,7 @@
                     </div>
                 </section>
                 <section role="region" aria-labelledby="bmfNIK" class="card">
-                        <hgroup role="heading">
+                        <hgroup role="heading" class="card__header">
                             <h4 class="typography--overline">
                                 <time>2007-2009 (Unfinished)</time>
                             </h4>
@@ -172,25 +172,25 @@
                             </h3>
                             <h5 class="typography--subtitle2">
                                 Budapest, Hungary</h5>
-                            <h5 class="typography--subtitle1">John von Neumann Faculty of Informatics</h5>
                         </hgroup>
-                        <div>
+                        <div class="card__body">
+                            <h5 class="typography--subtitle1">John von Neumann Faculty of Informatics</h5>
                             <h4 class="typography--headline6">
                                 Computer Engineering
                             </h4>
                         </div>
                 </section>
                 <section role="region" aria-labelledby="mesharray" class="card">
-                    <hgroup role="heading">
+                    <hgroup role="heading" class="card__header">
                         <h4 class="typography--overline">
-                            <time>2007-2008</time>
+                            <time>2007-2008 (graduated)</time>
                         </h4>
                         <h3 id="mesharray" class="typography--headline5">
                             <a href="https://mesharray.hu" target="blank">MeshArray Digital Media School</a>
                         </h3>
                         <h5 class="typography--subtitle2">Budapest, Hungary</h5>
                     </hgroup>
-                    <div>
+                    <div class="card__body">
                         <h4 class="typography--headline6">
                             Adobe Flash Expert
                         </h4>
@@ -198,20 +198,35 @@
                     </div>
                 </section>
                 <section role="region" aria-labelledby="KJG" class="card">
-                        <hgroup role="heading">
-                            <h4 class="typography--overline">
-                                <time>1996-2004 (graduated)</time>
-                            </h4>
-                            <h3 id="KJG" class="typography--hadline5">
-                                <a href="http://kjg.hu/" target="blank">Katona József Secondary Grammar School and faculty of ICT</a>
-                            </h3>
-                            <h5 class="typography--subtitle2">Kecskemét, Hungary</h5>
-                        </hgroup>
+                    <hgroup role="heading" class="card__header">
+                        <h4 class="typography--overline">
+                            <time>1996-2004 (graduated)</time>
+                        </h4>
+                        <h3 id="KJG" class="typography--headline5">
+                            <a href="http://kjg.hu/" target="blank">Katona József Secondary Grammar School and faculty of ICT</a>
+                        </h3>
+                        <h5 class="typography--subtitle2">Kecskemét, Hungary</h5>
+                    </hgroup>
                 </section>
             </article>
         </main>
         <aside id="my-skills" class="sidebar">
-            <section role="region" aria-labelledby="professional-skills" class="sidebar--skills__professional"></section>
+            <section role="region" aria-labelledby="professional-skills" class="card">
+                <hgroup role="heading" class="card__header">
+                    <h3 id="professional-skills" class="typography--headline5">
+                        Professional skills
+                    </h3>
+                </hgroup>
+                <div class="card__body">
+                    <p class="typography--body1">
+                        <ul class="list typography--body1">
+                            <li class="list__item">English</li>
+                            <li class="list__item">fhewgfiweigfwe</li>
+                            <li class="list__item"></li>
+                        </ul>
+                    </p>
+                </div>
+            </section>
         </aside>
     </div>
 </body>
