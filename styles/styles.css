@@ -7,17 +7,6 @@
 * Resumé styles
 * ==================================
 */
-a {
-    color: var(--theme-color--primary);
-}
-
-a:hover {
-    color: var(--theme-color--secondary);
-}
-
-a:visited {
-    color: var(--theme-color--primary);
-}
 
 /**
 * ------------------
