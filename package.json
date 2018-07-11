@@ -29,7 +29,7 @@
         "build:css": "node scripts/buildCSS.js",
         "build": "npm run build:css && cp ./*.html ./public && cp ./*.png",
         "cleanup": "rm yarn.lock; rm package-lock.json; rm -rf node_modules",
-        "lint:css": "stylelint './styles/*.css'",
+        "lint:css": "stylelint './styles/**/*.css'",
         "pdf": "node scripts/toPDF.js",
         "precommit": "lint-staged",
         "reboot": "npm run cleanup; npm install",
