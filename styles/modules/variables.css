@@ -15,8 +15,8 @@
     --color-material-blue--dark: hsla(197, 53%, 54%, 1);
 
     /* Theming */
-    --theme-color--primary: var(--color-material-blue);
-    --theme-color--secondary: var(--color-material-blue--dark);
+    --theme-color--primary: var(--color-material-blue--dark);
+    --theme-color--secondary: var(--color-material-blue);
     --theme-color--font: var(--color-black);
     --theme-color--background: var(--color-white);
 

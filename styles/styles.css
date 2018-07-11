@@ -7,11 +7,32 @@
 * Resumé styles
 * ==================================
 */
-.header {
+a {
+    color: var(--theme-color--primary);
+}
+
+a:hover {
+    color: var(--theme-color--secondary);
+}
+
+a:visited {
+    color: var(--theme-color--secondary);
+}
+
+.header-grid {
+    border-bottom: 1px solid var(--color-gray--mid);
     display: grid;
     grid-gap: var(--grid-gutter);
     grid-template-columns: 1fr 4fr;
+    margin: var(--grid-gutter);
     padding: var(--grid-gutter);
+}
+
+.main-grid {
+    display: grid;
+    grid-gap: var(--grid-gutter);
+    grid-template-columns: 2fr 1fr;
+    margin: var(--grid-gutter);
 }
 
 .header__portrait-image {
@@ -34,22 +55,30 @@
     margin-bottom: 1.2em;
 }
 
-.experience-card {
-    background-color: white;
-    margin: 0.6em;
-}
-main {
-    .typography--body1 + .typography--body1 {
-        margin-top: 0.8em;
-    }
+.main .typography--body1 + .typography--body1 {
+    margin-top: var(--grid-gutter);
 }
 
-@media print {
-    @page {
-        margin: 0.3cm;
-    }
-    a {
-        color: var(--mdc-theme--primary);
-        text-decoration: none;
-    }
+.main__section {
+    padding-bottom: var(--grid-gutter);
+}
+
+.main__section + .main__section {
+    border-top: 1px solid var(--color-gray--mid);
+    padding-top: var(--grid-gutter);
+}
+
+.card {
+    padding-bottom: var(--grid-gutter);
+    padding-top: var(--grid-gutter);
+}
+
+.card__section {
+    border-left: 1px solid var(--color-gray--mid);
+    margin-top: calc(var(--grid-gutter) / 2);
+    padding-left: 16px;
+}
+
+.card__section + .card__section {
+    margin-top: var(--grid-gutter);
 }
