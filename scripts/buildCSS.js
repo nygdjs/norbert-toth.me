@@ -1,15 +1,23 @@
 const critical = require('critical');
-var sass = require('node-sass');
+const concat = require('concat');
+const fs = require('fs');
 
-sass.render(
-    {
-        file: './styles/styles',
-    },
-    function(err, result) {
-        /*...*/
-    },
+// Create folder for concat
+fs.mkdirSync('./docs/styles');
+
+// Concat css files
+concat(
+    [
+        './node_modules/normalize.css/normalize.css',
+        './styles/modules/variables.css',
+        './styles/modules/generic.css',
+        './styles/modules/typography.css',
+        './styles/styles.css',
+    ],
+    './docs/styles/styles.css',
 );
 
+// Inline critical css
 // critical.generate({
 //     inline: true,
 //     base: './',
@@ -17,5 +25,5 @@ sass.render(
 //     dest: 'docs/index.html',
 //     minify: true,
 //     width: 1300,
-//     height: 9900,
+//     height: 900,
 // });

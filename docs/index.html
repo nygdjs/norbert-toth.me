@@ -16,13 +16,706 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
-
     <style>
-        a{color:var(--theme-color--primary)}a:visited{color:var(--theme-color--primary)}.header-grid{border-bottom:1px solid var(--color-gray--mid);display:grid;grid-gap:var(--grid-gutter);grid-template-columns:1fr 4fr;margin:var(--grid-gutter);padding:var(--grid-gutter)}.header__portrait-image{margin:0 auto auto auto}.header__portrait-image img{border-radius:50%;max-width:18em;width:100%}.header__name{margin-bottom:0;margin-top:0}.header__tagline{color:var(--color-gray--dark);margin-bottom:1.2em}.main-grid{display:grid;grid-gap:var(--grid-gutter);grid-template-columns:2fr 1fr;margin:var(--grid-gutter)}.main .typography--body1+.typography--body1{margin-top:var(--grid-gutter)}.main__section{padding-bottom:var(--grid-gutter)}.main__section+.main__section{border-top:1px solid var(--color-gray--mid);padding-top:var(--grid-gutter)}.card{padding-bottom:var(--grid-gutter);padding-top:var(--grid-gutter)}.card__body{border-left:1px solid var(--color-gray--mid);margin-top:calc(var(--grid-gutter)/ 2);padding-left:16px}.card__body+.card__body{margin-top:var(--grid-gutter)}.list{list-style-type:circle}@media (max-width:750px){.header-grid{grid-template-columns:1fr}.main-grid{grid-template-columns:1fr}}
+        /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+        /* Document
+   ========================================================================== */
+
+        /**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+        html {
+            line-height: 1.15;
+            /* 1 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+        }
+
+        /* Sections
+   ========================================================================== */
+
+        /**
+ * Remove the margin in all browsers.
+ */
+
+        body {
+            margin: 0;
+        }
+
+        /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+        /* Grouping content
+   ========================================================================== */
+
+        /**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+        hr {
+            box-sizing: content-box;
+            /* 1 */
+            height: 0;
+            /* 1 */
+            overflow: visible;
+            /* 2 */
+        }
+
+        /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+        pre {
+            font-family: monospace, monospace;
+            /* 1 */
+            font-size: 1em;
+            /* 2 */
+        }
+
+        /* Text-level semantics
+   ========================================================================== */
+
+        /**
+ * Remove the gray background on active links in IE 10.
+ */
+
+        a {
+            background-color: transparent;
+        }
+
+        /**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+        abbr[title] {
+            border-bottom: none;
+            /* 1 */
+            text-decoration: underline;
+            /* 2 */
+            text-decoration: underline dotted;
+            /* 2 */
+        }
+
+        /**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+        code,
+        kbd,
+        samp {
+            font-family: monospace, monospace;
+            /* 1 */
+            font-size: 1em;
+            /* 2 */
+        }
+
+        /**
+ * Add the correct font size in all browsers.
+ */
+
+        small {
+            font-size: 80%;
+        }
+
+        /**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        /* Embedded content
+   ========================================================================== */
+
+        /**
+ * Remove the border on images inside links in IE 10.
+ */
+
+        img {
+            border-style: none;
+        }
+
+        /* Forms
+   ========================================================================== */
+
+        /**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            line-height: 1.15;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+        }
+
+        /**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+        button,
+        input {
+            /* 1 */
+            overflow: visible;
+        }
+
+        /**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+        button,
+        select {
+            /* 1 */
+            text-transform: none;
+        }
+
+        /**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+        /**
+ * Remove the inner border and padding in Firefox.
+ */
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        /**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        /**
+ * Correct the padding in Firefox.
+ */
+
+        fieldset {
+            padding: 0.35em 0.75em 0.625em;
+        }
+
+        /**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+        legend {
+            box-sizing: border-box;
+            /* 1 */
+            color: inherit;
+            /* 2 */
+            display: table;
+            /* 1 */
+            max-width: 100%;
+            /* 1 */
+            padding: 0;
+            /* 3 */
+            white-space: normal;
+            /* 1 */
+        }
+
+        /**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+        textarea {
+            overflow: auto;
+        }
+
+        /**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box;
+            /* 1 */
+            padding: 0;
+            /* 2 */
+        }
+
+        /**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+        [type="search"] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            outline-offset: -2px;
+            /* 2 */
+        }
+
+        /**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+
+        /* Interactive
+   ========================================================================== */
+
+        /*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+        details {
+            display: block;
+        }
+
+        /*
+ * Add the correct display in all browsers.
+ */
+
+        summary {
+            display: list-item;
+        }
+
+        /* Misc
+   ========================================================================== */
+
+        /**
+ * Add the correct display in IE 10+.
+ */
+
+        template {
+            display: none;
+        }
+
+        /**
+ * Add the correct display in IE 10.
+ */
+
+        [hidden] {
+            display: none;
+        }
+
+        /**
+* ------------------
+* Variables
+* ------------------
+*/
+
+        :root {
+            /* Color */
+            --color-black: hsla(0, 0%, 20%, 1);
+            --color-white: hsla(0, 0%, 100%, 1);
+            --color-gray--light: hsla(120, 2%, 88%, 1);
+            --color-gray--mid: hsla(120, 2%, 60%, 1);
+            --color-gray--dark: hsla(120, 2%, 40%, 1);
+            --color-material-blue: hsla(199, 92%, 74%, 1);
+            --color-material-blue--light: hsla(180, 100%, 86%, 1);
+            --color-material-blue--dark: hsla(197, 53%, 54%, 1);
+
+            /* Theming */
+            --theme-color--primary: var(--color-material-blue--dark);
+            --theme-color--secondary: var(--color-material-blue);
+            --theme-color--font: var(--color-black);
+            --theme-color--background: var(--color-white);
+
+            /* Typography */
+            --font-size--default: 16px;
+            --font-weight--default: 400;
+            --font-weight--light: 300;
+            --font-weight--bold: 700;
+
+            /* Grid */
+            --spacing: 24px;
+            --spacing--small: 16px;
+        }
+
+        @import url('./variables.css');
+
+        body,
+        html {
+            background-color: var(--theme-color-background);
+            color: var(--theme-color--font);
+            /* stylelint-disable */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+            sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            /* stylelint-enable */
+            font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+            font-kerning: normal;
+            font-size: var(--font-size--default);
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-style: normal;
+            font-variant-ligatures: common-ligatures contextual;
+            font-weight: var(--font-weight--default);
+            line-height: 1.5;
+            min-height: 100vh;
+            min-width: 100vw;
+            text-rendering: optimizeLegibility;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin-block-end: 0;
+            margin-block-start: 0;
+            margin-inline-end: 0;
+            margin-inline-start: 0;
+            padding-block-end: 0;
+            padding-block-start: 0;
+            padding-inline-end: 0;
+            padding-inline-start: 0;
+        }
+
+        .typography--headline1 {
+            font-size: 6rem;
+            font-weight: var(--font-weight--light);
+            letter-spacing: -0.01562em;
+            line-height: 6rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--headline2 {
+            font-size: 3.75rem;
+            font-weight: var(--font-weight--light);
+            letter-spacing: -0.00833em;
+            line-height: 3.75rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--headline3 {
+            font-size: 3rem;
+            font-weight: var(--font-weight--default);
+            letter-spacing: normal;
+            line-height: 3.125rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--headline4 {
+            font-size: 2.125rem;
+            font-weight: var(--font-weight--default);
+            letter-spacing: 0.00735em;
+            line-height: 2.5rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--headline5 {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight--default);
+            letter-spacing: normal;
+            line-height: 2rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--headline6 {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight--bold);
+            letter-spacing: 0.0125em;
+            line-height: 2rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--subtitle1 {
+            font-size: 1rem;
+            font-weight: var(--font-weight--default);
+            letter-spacing: 0.00937em;
+            line-height: 1.75rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--subtitle2 {
+            font-size: 0.875rem;
+            font-weight: var(--font-weight--bold);
+            letter-spacing: 0.00714em;
+            line-height: 1.375rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--body1 {
+            font-size: 1rem;
+            font-weight: var(--font-weight--default);
+            letter-spacing: 0.03125em;
+            line-height: 1.5rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--body2 {
+            font-size: 0.875rem;
+            font-weight: var(--font-weight--default);
+            letter-spacing: 0.01786em;
+            line-height: 1.25rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--caption {
+            font-size: 0.75rem;
+            font-weight: var(--font-weight--default);
+            letter-spacing: 0.03333em;
+            line-height: 1.25rem;
+            text-decoration: inherit;
+            text-transform: inherit;
+        }
+
+        .typography--button {
+            font-size: 0.875rem;
+            font-weight: var(--font-weight--bold);
+            letter-spacing: 0.08929em;
+            line-height: 2.25rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .typography--overline {
+            font-size: 0.75rem;
+            font-weight: var(--font-weight--bold);
+            letter-spacing: 0.16667em;
+            line-height: 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: var(--theme-color--primary);
+        }
+
+        a:hover {
+            color: var(--theme-color--secondary);
+        }
+
+        a:visited {
+            color: var(--theme-color--primary);
+        }
+
+        @import url('../node_modules/normalize.css/normalize.css');
+        @import url('./modules/generic.css');
+        @import url('./modules/typography.css');
+
+        /**
+* ==================================
+* Resumé styles
+* ==================================
+*/
+
+        /**
+* ------------------
+* Header styles
+* ------------------
+*/
+
+        .header-grid {
+            border-bottom: 1px solid var(--color-gray--mid);
+            display: grid;
+            grid-gap: var(--spacing);
+            grid-template-columns: 1fr 4fr;
+            margin: var(--spacing);
+            padding: var(--spacing);
+        }
+
+        .header__portrait-image {
+            margin: 0 auto auto auto;
+        }
+
+        .header__portrait-image img {
+            border-radius: 50%;
+            max-width: 18em;
+            width: 100%;
+        }
+
+        .header__name {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .header__tagline {
+            color: var(--color-gray--dark);
+            margin-bottom: 1.2em;
+        }
+
+        /**
+* ------------------
+* Main styles
+* ------------------
+*/
+
+        .main-grid {
+            display: grid;
+            grid-gap: var(--spacing);
+            grid-template-columns: 2fr 1fr;
+            margin: var(--spacing);
+        }
+
+        .main .typography--body1+.typography--body1 {
+            margin-top: var(--spacing);
+        }
+
+        .main__section {
+            padding-bottom: var(--spacing);
+        }
+
+        .main__section+.main__section {
+            border-top: 1px solid var(--color-gray--mid);
+            padding-top: var(--spacing);
+        }
+
+        /**
+* ------------------
+* Card styles
+* ------------------
+*/
+
+        .card {
+            padding-bottom: var(--spacing);
+            padding-top: var(--spacing);
+        }
+
+        .card__body {
+            border-left: 1px solid var(--color-gray--mid);
+            margin-top: calc(var(--spacing) / 2);
+            padding-left: 16px;
+        }
+
+        .card__body+.card__body {
+            margin-top: var(--spacing);
+        }
+
+        /**
+* ------------------
+* List styles
+* ------------------
+*/
+
+        .list {
+            list-style-type: circle;
+        }
+
+        /**
+* ------------------
+* Sidebar styles
+* ------------------
+*/
+
+        /**
+* ------------------
+* Responsive styles
+* ------------------
+*/
+
+        @media (max-width: 750px) {
+            .header-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
-    <link rel="preload" href="styles/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles/styles.css"></noscript>
-    <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -130,7 +823,7 @@
                         <h5 class="typography--subtitle2">Budapest, Hungary</h5>
                     </hgroup>
                     <div aria-labelledby="shop-manager" class="card__body">
-                        <h4 id="shop-manager" class="typography--headline6">Store manager</h4>
+                        <h4 id="shop-manager" class="typography--headline6">Shop manager, Creative manager, Display specialist</h4>
                         <p class="typography--body1">I worked there from the first day, we opened the shop. As the company is a specialist in creative
                             process related hardwares (graphics displays, pen tablets, workstations), my role beside normal
                             store management was to be up-to-date in these product categories. Through the years I became
@@ -168,22 +861,22 @@
                     </div>
                 </section>
                 <section role="region" aria-labelledby="bmfNIK" class="card">
-                        <hgroup role="heading" class="card__header">
-                            <h4 class="typography--overline">
-                                <time>2007-2009 (Unfinished)</time>
-                            </h4>
-                            <h3 id="bmfNIK" class="typography--headline5">
-                                <a href="https://www.uni-obuda.hu/en" target="blank">Óbuda University</a>
-                            </h3>
-                            <h5 class="typography--subtitle2">
-                                Budapest, Hungary</h5>
-                        </hgroup>
-                        <div class="card__body">
-                            <h5 class="typography--subtitle1">John von Neumann Faculty of Informatics</h5>
-                            <h4 class="typography--headline6">
-                                Computer Engineering
-                            </h4>
-                        </div>
+                    <hgroup role="heading" class="card__header">
+                        <h4 class="typography--overline">
+                            <time>2007-2009 (Unfinished)</time>
+                        </h4>
+                        <h3 id="bmfNIK" class="typography--headline5">
+                            <a href="https://www.uni-obuda.hu/en" target="blank">Óbuda University</a>
+                        </h3>
+                        <h5 class="typography--subtitle2">
+                            Budapest, Hungary</h5>
+                    </hgroup>
+                    <div class="card__body">
+                        <h5 class="typography--subtitle1">John von Neumann Faculty of Informatics</h5>
+                        <h4 class="typography--headline6">
+                            Computer Engineering
+                        </h4>
+                    </div>
                 </section>
                 <section role="region" aria-labelledby="mesharray" class="card">
                     <hgroup role="heading" class="card__header">

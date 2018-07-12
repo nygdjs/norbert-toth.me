@@ -9,6 +9,7 @@ const filestoCopy = [
     './favicon-16x16.png',
     './favicon-32x32.png',
     './favicon.ico',
+    './index.html',
     './mstile-150x150.png',
     './robots.txt',
     './safari-pinned-tab.svg',
@@ -22,8 +23,4 @@ copy.each(filestoCopy, './docs', function (err, files) {
 
 copy('./images/*.*', './docs/images', function (err, files) {
     if (err) throw (err);
-});
-
-copy('./pdf/*.*', './docs/pdf', function(err, files) {
-    if (err) throw err;
 });
