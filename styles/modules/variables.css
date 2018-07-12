@@ -15,8 +15,8 @@
     --color-material-blue--dark: hsla(197, 53%, 54%, 1);
 
     /* Theming */
-    --theme-color--primary: var(--color-material-blue--dark);
-    --theme-color--secondary: var(--color-material-blue);
+    --theme-color--primary: var(--color-black);
+    --theme-color--secondary: var(--color-gray--dark);
     --theme-color--font: var(--color-black);
     --theme-color--background: var(--color-white);
 
@@ -27,6 +27,6 @@
     --font-weight--bold: 700;
 
     /* Grid */
-    --grid-gutter: 24px;
-    --grid-gutter--small: 16px;
+    --spacing: 1.5em;
+    --spacing--small: 1em;
 }

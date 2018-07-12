@@ -117,6 +117,7 @@
 
 a {
     color: var(--theme-color--primary);
+    transition: color 200ms ease-out;
 }
 
 a:hover {
@@ -125,4 +126,8 @@ a:hover {
 
 a:visited {
     color: var(--theme-color--primary);
+}
+
+a:visited:hover {
+    color: var(--theme-color--secondary);
 }

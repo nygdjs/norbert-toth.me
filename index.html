@@ -58,7 +58,7 @@
     <div class="main-grid">
         <main role="main" class="main">
             <article role="article" aria-labelledby="employment" class="main__section">
-                <h2 id="employment" class="typography--headline4">Experience</h2>
+                <h2 id="employment" class="typography--headline4 main__section__header">Experience</h2>
 
                 <section role="region" aria-labelledby="quince" class="card">
                     <hgroup role="heading" class="card__header">
@@ -144,41 +144,35 @@
             <article role="article" aria-labelledby="education" class="main__section">
                 <h2 id="education" class="typography--headline4">Education</h2>
 
-                <section role="region" aria-labelledby="bmfRKK" class="card">
+                <section role="region" aria-labelledby="bmf" class="card">
                     <hgroup role="heading" class="card__header">
                         <h4 class="typography--overline">
-                            <time>2010-2012 (Unfinished)</time>
+                            <time>2007-2012</time>
                         </h4>
-                        <h3 id="bmfRKK" class="typography--headline5">
+                        <h3 id="bmf" class="typography--headline5">
                             <a href="https://www.uni-obuda.hu/en" target="blank">Óbuda University</a>
                         </h3>
                         <h5 class="typography--subtitle2">Budapest, Hungary</h5>
                     </hgroup>
-                    <div class="card__body">
+                    <div class="card__body" aria-labelledby="rkk">
+                        <hgroup role="heading" class="card__body__subheader">
+                            <h5 class="typography--overline">
+                                <time>2010 - 2012 (not finished)</time>
+                            </h5>
+                            <h4 id="rkk" class="typography--headline6">Light Industry Engineering</h4>
+                        </hgroup>
                         <h5 class="typography--subtitle1">Sándor Rejtő Faculty of Light Industry and Environmental Protection Engineering</h5>
-                        <h4 class="typography--headline6">
-                            Light Industry Engineering
-                        </h4>
                         <p class="typography--body1">(with the intention to study industrial package design)</p>
                     </div>
-                </section>
-                <section role="region" aria-labelledby="bmfNIK" class="card">
-                        <hgroup role="heading" class="card__header">
-                            <h4 class="typography--overline">
-                                <time>2007-2009 (Unfinished)</time>
-                            </h4>
-                            <h3 id="bmfNIK" class="typography--headline5">
-                                <a href="https://www.uni-obuda.hu/en" target="blank">Óbuda University</a>
-                            </h3>
-                            <h5 class="typography--subtitle2">
-                                Budapest, Hungary</h5>
+                    <div class="card__body" aria-labelledby="nik">
+                        <hgroup role="heading" class="card__body__subheader">
+                            <h5 class="typography--overline">
+                                <time>2007 - 2009 (not finished)</time>
+                            </h5>
+                            <h4 id="nik" class="typography--headline6">Computer Engineering</h4>
                         </hgroup>
-                        <div class="card__body">
-                            <h5 class="typography--subtitle1">John von Neumann Faculty of Informatics</h5>
-                            <h4 class="typography--headline6">
-                                Computer Engineering
-                            </h4>
-                        </div>
+                        <h5 class="typography--subtitle1">John von Neumann Faculty of Informatics</h5>
+                    </div>
                 </section>
                 <section role="region" aria-labelledby="mesharray" class="card">
                     <hgroup role="heading" class="card__header">
@@ -210,23 +204,37 @@
                 </section>
             </article>
         </main>
-        <aside id="my-skills" class="sidebar">
-            <section role="region" aria-labelledby="professional-skills" class="card">
-                <hgroup role="heading" class="card__header">
-                    <h3 id="professional-skills" class="typography--headline5">
-                        Professional skills
-                    </h3>
-                </hgroup>
-                <div class="card__body">
-                    <p class="typography--body1">
+        <aside class="sidebar">
+            <article role="article" aria-labelledby="pro-skills" class="main__section">
+                <h2 id="pro-skills" class="typography--headline4 main__section__header">Professional skills</h2>
+
+                <section role="region" class="card">
+                    <div class="card__body" aria-labelledby="languages">
+                        <hgroup role="heading" class="card__body__subheader">
+                            <h4 id="languages" class="typography--headline6">Language skills</h4>
+                        </hgroup>
                         <ul class="list typography--body1">
-                            <li class="list__item">English</li>
-                            <li class="list__item">fhewgfiweigfwe</li>
-                            <li class="list__item"></li>
+                            <li class="list__item">Hungarian <i>(native)</i></li>
+                            <li class="list__item">English <i>(intermediate professional proficiency)</i></li>
+                            <li class="list__item">Spanish <i>(<small>very</small> basic)</i></li>
                         </ul>
-                    </p>
-                </div>
-            </section>
+                    </div>
+                    <div class="card__body" aria-labelledby="dev">
+                        <hgroup role="heading" class="card__body__subheader">
+                            <h4 id="dev" class="typography--headline6">Development skills</h4>
+                        </hgroup>
+                        <ul class="list typography--body1">
+                            <li class="list__item">HTML</li>
+                            <li class="list__item">CSS</li>
+                            <li class="list__item">JavScript ES6 +</li>
+                            <li class="list list_item">React</li>
+                            <li class="list list_item">Preact</li>
+                            <li class="list list_item">React Native</li>
+                            <lis class="list list_item">styled-components</lis>
+                        </ul>
+                    </div>
+                </section>
+            </article>
         </aside>
     </div>
 </body>
