@@ -10,13 +10,13 @@
     --color-gray--light: hsla(120, 2%, 88%, 1);
     --color-gray--mid: hsla(120, 2%, 60%, 1);
     --color-gray--dark: hsla(120, 2%, 40%, 1);
-    --color-material-blue: hsla(199, 92%, 74%, 1);
-    --color-material-blue--light: hsla(180, 100%, 86%, 1);
-    --color-material-blue--dark: hsla(197, 53%, 54%, 1);
+    --color-material-blue: hsla(207, 90%, 61%, 1);
+    --color-material-blue--light: hsla(199, 100%, 75%, 1);
+    --color-material-blue--dark: hsla(203, 100%, 38%, 1);
 
     /* Theming */
     --theme-color--primary: var(--color-black);
-    --theme-color--secondary: var(--color-gray--dark);
+    --theme-color--secondary: var(--color-material-blue--dark);
     --theme-color--font: var(--color-black);
     --theme-color--background: var(--color-white);
 

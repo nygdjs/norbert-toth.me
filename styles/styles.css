@@ -10,7 +10,7 @@
 
 /**
 * ------------------
-* Header styles
+* Header
 * ------------------
 */
 .header-grid {
@@ -24,12 +24,27 @@
 
 .header__portrait-image {
     margin: 0 auto auto auto;
+    position: relative;
 }
 
 .header__portrait-image img {
     border-radius: 50%;
     max-width: 18em;
+    min-width: 10em;
     width: 100%;
+}
+
+.ohai {
+    display: none;
+}
+
+.header__portrait-image:hover .ohai {
+    display: block;
+    font-size: 5em;
+    left: 25%;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
 }
 
 .header__name {
@@ -44,12 +59,12 @@
 
 /**
 * ------------------
-* Main styles
+* Main
 * ------------------
 */
 .main-grid {
     display: grid;
-    grid-gap: calc(4 * var(--spacing));
+    grid-gap: calc(4 * var(--spacing--small));
     grid-template-columns: 2fr 1fr;
     margin: var(--spacing);
 }
@@ -69,7 +84,7 @@
 
 /**
 * ------------------
-* Card styles
+* Card
 * ------------------
 */
 .card {
@@ -87,22 +102,27 @@
     margin-top: var(--spacing);
 }
 
-/**
-* ------------------
-* List styles
-* ------------------
-*/
-.list {
-    list-style-type: '-';
+.card__body__subsection + .card__body__subsection {
+    margin-top: var(--spacing--small);
 }
 
 /**
 * ------------------
-* Sidebar styles
+* List
+* ------------------
+*/
+.list {
+    padding-left: var(--spacing--small);
+}
+
+/**
+* ------------------
+* Sidebar
 * ------------------
 */
 .sidebar .card__body {
     border: 0;
+    padding-left: 0;
 }
 
 /**
@@ -110,13 +130,43 @@
 * Responsive styles
 * ------------------
 */
-
 @media (max-width: 750px) {
     .header-grid {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .main-grid {
         grid-template-columns: 1fr;
+    }
+
+    .header__portrait-image img {
+        max-width: 12em;
+    }
+}
+
+@media (min-width: 1100px) {
+    .header__tagline {
+        max-width: 70%;
+    }
+}
+
+/**
+* ------------------
+* Print styles
+* ------------------
+*/
+@media print {
+    a {
+        text-decoration: none;
+    }
+
+    @page {
+        margin: 0 0.5cm 0.5cm 0.5cm;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.3;
     }
 }
