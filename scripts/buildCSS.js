@@ -18,12 +18,12 @@ concat(
 );
 
 // Inline critical css
-// critical.generate({
-//     inline: true,
-//     base: './',
-//     src: 'index.html',
-//     dest: 'docs/index.html',
-//     minify: true,
-//     width: 1300,
-//     height: 900,
-// });
+critical.generate({
+    inline: true,
+    base: './',
+    src: 'index.html',
+    dest: 'docs/index.html',
+    minify: true,
+    width: 1300,
+    height: 900,
+});
