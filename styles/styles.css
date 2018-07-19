@@ -191,8 +191,8 @@
         font-size: 90%;
     }
 
-    .header__details p {
-        font-size: 95%;
+    .header__details__legend {
+        display: none;
     }
 
     .main-grid {
