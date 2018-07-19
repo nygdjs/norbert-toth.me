@@ -19,7 +19,7 @@
     grid-gap: var(--spacing);
     grid-template-columns: 1fr 4fr;
     margin: var(--spacing);
-    padding: var(--spacing);
+    padding: var(--spacing) 0;
 }
 
 .header__portrait-image {
@@ -57,6 +57,10 @@
     margin-bottom: 1.2em;
 }
 
+.header__tagline span {
+    display: block;
+}
+
 /**
 * ------------------
 * Main
@@ -69,12 +73,8 @@
     margin: var(--spacing);
 }
 
-.main .typography--body1 + .typography--body1 {
-    margin-top: var(--spacing);
-}
-
-.main__section {
-    padding-bottom: var(--spacing);
+.main-grid .typography--body1 + .typography--body1 {
+    margin-top: var(--spacing--small);
 }
 
 .main__section + .main__section {
@@ -106,6 +106,11 @@
     margin-top: var(--spacing--small);
 }
 
+.time--small {
+    font-size: 0.68rem;
+    line-height: 1.4rem;
+}
+
 /**
 * ------------------
 * List
@@ -125,6 +130,10 @@
     padding-left: 0;
 }
 
+.sidebar .card {
+    padding-top: var(--spacing--small);
+}
+
 /**
 * ------------------
 * Responsive styles
@@ -132,8 +141,8 @@
 */
 @media (max-width: 750px) {
     .header-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: 1fr 4fr;
+        text-align: left;
     }
 
     .main-grid {
@@ -156,17 +165,55 @@
 * Print styles
 * ------------------
 */
-@media print {
+@media print and (min-width: 10px) {
+    :root {
+        --font-size--default: 14px;
+    }
+
+    .header-grid {
+        grid-template-columns: 1fr 4fr;
+        margin-bottom: var(--spacing);
+        text-align: left;
+    }
+
+    .header__main {
+        display: grid;
+        grid-column-gap: calc(3 * var(--spacing--small));
+        grid-template-columns: 4fr 3fr;
+    }
+
+    .header__subheader {
+        grid-column: 1/-1;
+        grid-row: 1/1;
+    }
+
+    .header__tagline {
+        font-size: 90%;
+    }
+
+    .header__details p {
+        font-size: 95%;
+    }
+
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .header__portrait-image img {
+        max-width: 16em;
+    }
+
+    [aria-labelledby="oazis"],
+    [aria-labelledby="personal-skills"] {
+        border-top: 0 !important;
+        page-break-before: always;
+    }
+
     a {
         text-decoration: none;
     }
 
     @page {
         margin: 0 0.5cm 0.5cm 0.5cm;
-    }
-
-    body {
-        font-size: 12pt;
-        line-height: 1.3;
     }
 }
