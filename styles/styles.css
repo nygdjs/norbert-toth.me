@@ -195,16 +195,16 @@
         display: none;
     }
 
-    .main-grid {
-        grid-template-columns: 2fr 1fr;
-    }
-
     .header__portrait-image img {
         max-width: 16em;
     }
 
-    [aria-labelledby="oazis"],
-    [aria-labelledby="personal-skills"] {
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    [aria-labelledby='oazis'],
+    [aria-labelledby='personal-skills'] {
         border-top: 0 !important;
         page-break-before: always;
     }
