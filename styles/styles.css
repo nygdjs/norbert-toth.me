@@ -4,22 +4,35 @@
 
 /**
 * ==================================
-* Resumé styles
+* CV styles
 * ==================================
 */
+.typography--body1 + .typography--body1 {
+    margin-top: var(--spacing--small);
+}
+
+body > * {
+    margin: var(--spacing);
+}
+
+body > :not(script) + * {
+    border-top: 1px solid var(--color-gray--mid);
+    padding: var(--spacing) 0;
+}
 
 /**
 * ------------------
 * Header
 * ------------------
 */
-.header-grid {
-    border-bottom: 1px solid var(--color-gray--mid);
+.header {
     display: grid;
     grid-gap: var(--spacing);
     grid-template-columns: 1fr 4fr;
-    margin: var(--spacing);
-    padding: var(--spacing) 0;
+}
+
+.header .typography--body1 + .typography--body1 {
+    margin-top: inherit;
 }
 
 .header__portrait-image {
@@ -41,7 +54,7 @@
 
 .header__tagline {
     color: var(--color-gray--dark);
-    margin-bottom: 1.2em;
+    margin-bottom: var(--spacing);
 }
 
 .header__tagline span {
@@ -53,18 +66,13 @@
 * Main
 * ------------------
 */
-.main-grid {
+.primary-grid {
     display: grid;
     grid-gap: calc(4 * var(--spacing--small));
     grid-template-columns: 2fr 1fr;
-    margin: var(--spacing);
 }
 
-.main-grid .typography--body1 + .typography--body1 {
-    margin-top: var(--spacing--small);
-}
-
-.main__section + .main__section {
+.primary-grid > * > * + * {
     border-top: 1px solid var(--color-gray--mid);
     padding-top: var(--spacing);
 }
@@ -75,21 +83,20 @@
 * ------------------
 */
 .card {
-    padding-bottom: var(--spacing);
-    padding-top: var(--spacing);
+    padding: var(--spacing) 0;
 }
 
-.card__body {
+.card__section {
     border-left: 1px solid var(--color-gray--mid);
-    margin-top: calc(var(--spacing) / 2);
-    padding-left: 16px;
+    margin-top: var(--spacing--small);
+    padding-left: var(--spacing--small);
 }
 
-.card__body + .card__body {
+.card__section + .card__section {
     margin-top: var(--spacing);
 }
 
-.card__body__subsection + .card__body__subsection {
+.card__section__subsection + .card__section__subsection {
     margin-top: var(--spacing--small);
 }
 
@@ -99,7 +106,7 @@
 }
 
 /**
-* ------------------
+* ------------------77
 * List
 * ------------------
 */
@@ -112,11 +119,6 @@
 * Sidebar
 * ------------------
 */
-.sidebar .card__body {
-    border: 0;
-    padding-left: 0;
-}
-
 .sidebar .card {
     padding-top: var(--spacing--small);
 }
@@ -126,13 +128,13 @@
 * Responsive styles
 * ------------------
 */
-@media (max-width: 750px) {
-    .header-grid {
+@media screen and (max-width: 750px) {
+    .header {
         grid-template-columns: 1fr 4fr;
-        text-align: left;
+        text-align: center;
     }
 
-    .main-grid {
+    .primary-grid {
         grid-template-columns: 1fr;
     }
 
@@ -152,17 +154,20 @@
 * Print styles
 * ------------------
 */
-@media print and (min-width: 10px) {
+@media print {
     :root {
-        --font-size--default: 14px;
+        --font-size--default: 12px;
     }
 
-    .header-grid {
-        grid-template-columns: 1fr 4fr;
-        margin-bottom: var(--spacing);
-        text-align: left;
+    a {
+        text-decoration: none;
     }
 
+    @page {
+        margin: 0.8cm;
+    }
+
+    /* Subgrid for header */
     .header__main {
         display: grid;
         grid-column-gap: calc(3 * var(--spacing--small));
@@ -182,25 +187,7 @@
         display: none;
     }
 
-    .header__portrait-image img {
-        max-width: 16em;
-    }
-
-    .main-grid {
-        grid-template-columns: 2fr 1fr;
-    }
-
-    [aria-labelledby='oazis'],
     [aria-labelledby='personal-skills'] {
-        border-top: 0 !important;
-        page-break-before: always;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    @page {
-        margin: 0 0.5cm 0.5cm 0.5cm;
+        border-top: 0;
     }
 }
