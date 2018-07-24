@@ -1,0 +1,49 @@
+# OS generated files #
+##########################################
+._*
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IDE project and build tool files #
+##########################################
+.cache
+.env.development.local
+.env.local
+.env.production.local
+.env.test.local
+.idea/**
+.idea/**
+.imdone/**
+.remote-sync.json
+.vim.sess
+.vscode/**
+.watchmanconfig
+*.iml
+*.ipr
+*.iws
+/build/**
+/coverage/**
+/nbproject/**
+/public
+dist/**
+prepros.cfg
+
+# Vagrant related files and folders #
+##########################################
+.vagrant/**
+Vagrantfile
+
+# NPM, Bower, Lerna, Yarn #
+##########################################
+**/**/node_modules/.bin
+bower_components/**
+lerna-debug.log
+node_modules/**
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
