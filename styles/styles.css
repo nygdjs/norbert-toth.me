@@ -164,7 +164,7 @@ body > :not(script) + * {
     }
 
     /* Insert the url as text instead of the link for print styles */
-    a[href]::after {
+    main a[href]::after {
         content: ' (' attr(href) ')';
         font-size: 0.8em;
     }
@@ -175,8 +175,8 @@ body > :not(script) + * {
 
     /* Subgrid for header */
     .header__main {
+        column-gap: calc(3 * var(--spacing--small));
         display: grid;
-        grid-column-gap: calc(3 * var(--spacing--small));
         grid-template-columns: 4fr 3fr;
     }
 
