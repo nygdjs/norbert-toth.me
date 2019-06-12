@@ -163,6 +163,12 @@ body > :not(script) + * {
         text-decoration: none;
     }
 
+    /* Insert the url as text instead of the link for print styles */
+    a[href]::after {
+        content: ' (' attr(href) ')';
+        font-size: 0.8em;
+    }
+
     @page {
         margin: 0.8cm;
     }
