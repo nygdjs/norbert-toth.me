@@ -1,3 +1,3 @@
-# 💥 norbert-toth.me
+# 🤓 Resume for Norbert Toth
 
-My personal website, written is pure CSS and HTML.
+My resume, written is pure CSS and HTML.
