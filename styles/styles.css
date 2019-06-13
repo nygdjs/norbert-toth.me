@@ -159,6 +159,10 @@ body > :not(script) + * {
         --font-size--default: 12px;
     }
 
+    @page {
+        margin: 8mm;
+    }
+
     a {
         text-decoration: none;
     }
@@ -167,10 +171,6 @@ body > :not(script) + * {
     main a[href]::after {
         content: ' (' attr(href) ')';
         font-size: 0.8em;
-    }
-
-    @page {
-        margin: 0.8cm;
     }
 
     /* Subgrid for header */
@@ -195,5 +195,10 @@ body > :not(script) + * {
 
     [aria-labelledby='personal-skills'] {
         border-top: 0;
+    }
+
+    [aria-labelledby='content-editor'] {
+        border-top: 0;
+        page-break-before: always;
     }
 }
