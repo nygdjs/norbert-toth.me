@@ -40,3 +40,8 @@ node_modules/**
 lerna-debug.log
 npm-debug.log
 yarn-error.log
+
+# Project specific #
+##########################################
+docs
+
