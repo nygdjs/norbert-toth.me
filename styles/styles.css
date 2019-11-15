@@ -25,6 +25,10 @@ body > :not(script) + * {
 * Header
 * ------------------
 */
+.lazy {
+    background-image: none !important;
+}
+
 .header {
     background-image: url('../images/bad_brains_banned_cover.png');
     background-position: center;
