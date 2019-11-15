@@ -26,9 +26,14 @@ body > :not(script) + * {
 * ------------------
 */
 .header {
+    background-image: url('../images/bad_brains_banned_cover.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-gap: var(--spacing);
     grid-template-columns: 1fr 4fr;
+    padding: var(--spacing--small);
 }
 
 .header .typography--body1 + .typography--body1 {
