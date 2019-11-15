@@ -36,11 +36,14 @@
         "start": "browser-sync start --server --files './'"
     },
     "dependencies": {
-        "normalize.css": "^8.0.1"
+        "html2canvas": "^1.0.0-rc.5",
+        "jspdf": "^1.5.3",
+        "normalize.css": "^8.0.1",
+        "puppeteer": "^2.0.0"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.7",
         "concat": "^1.0.3",
+        "browser-sync": "^2.26.7",
         "copy": "^0.3.2",
         "critical": "^1.3.7",
         "husky": "^3.0.9",
