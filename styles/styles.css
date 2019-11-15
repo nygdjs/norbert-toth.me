@@ -36,7 +36,7 @@ body > :not(script) + * {
     background-size: cover;
     display: grid;
     grid-gap: var(--spacing);
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
     padding: var(--spacing--small);
 }
 
@@ -44,16 +44,10 @@ body > :not(script) + * {
     margin-top: inherit;
 }
 
-.header__portrait-image {
-    margin: 0 auto auto auto;
-    position: relative;
-}
-
 .header__portrait-image img {
     border-radius: 50%;
-    max-width: 18em;
+    max-width: 16em;
     min-width: 10em;
-    width: 100%;
 }
 
 .header__name {
@@ -64,6 +58,7 @@ body > :not(script) + * {
 .header__tagline {
     color: var(--color-gray--dark);
     margin-bottom: var(--spacing);
+    max-width: 80%;
 }
 
 /**
@@ -131,7 +126,7 @@ body > :not(script) + * {
 
 /**
 * ------------------
-* Sidebar
+* About section
 * ------------------
 */
 #about small {
