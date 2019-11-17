@@ -30,7 +30,7 @@ body > :not(script) + * {
 }
 
 .header {
-    background-image: url('../images/bad_brains_banned_cover.png');
+    background-image: url('../images/bad_brains_cover.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,7 +58,7 @@ body > :not(script) + * {
 .header__tagline {
     color: var(--color-gray--dark);
     margin-bottom: var(--spacing);
-    max-width: 80%;
+    max-width: 75%;
 }
 
 /**
@@ -150,12 +150,6 @@ body > :not(script) + * {
 
     .header__portrait-image img {
         max-width: 12em;
-    }
-}
-
-@media (min-width: 1100px) {
-    .header__tagline {
-        max-width: 70%;
     }
 }
 
