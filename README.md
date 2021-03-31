@@ -1,1 +1,1 @@
-# Made with [Gatsby V2](https://next.gatsbyjs.org)
+# A quick starter with [SvelteKit](https://kit.svelte.dev/docs)
